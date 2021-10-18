@@ -41,63 +41,22 @@ library(units)
 ```
 
 
-# A reminder about biodiversity
-
-.pull-left[
-
-* A the basis of many ecosystem services
-
-<br>
-* Globally decreasing but local loss is not certain (Dornelas *et al* 2014)
-
-<br>
-* Several species-based facets of biodiversity: species richness, species diversity, $\alpha$, $\beta$, $\gamma$ diversity, trends...
-
-]
-
-.pull-right[
-
-```{r,out.height='400px'}
-rm(list = ls())
-knitr::include_graphics("images/Forest_fruits_from_Barro_Colorado.png")
-```
-
-.credit[BCI fruits, Panama]
-]
-
----
-
-# A reminder about biodiversity
-
-.pull-left[
-<br>
-* Biodiversity is an extensive variable = defined by space and/or time
-
-<br>
-* Spatial and temporal scales can highly influence biodiversity and its dynamic
-]
-
-.pull-right[
-
-```{r,out.height='400px'}
-rm(list = ls())
-knitr::include_graphics("images/Forest_fruits_from_Barro_Colorado.png")
-```
-
-.credit[BCI fruits, Panama]
-]
-
-
-.center[**But what is the link between space, time and biodiversity?**]
-
----
-
 class: inverse, center, middle
 
 Focus on
 
 ## Species Richness
 
+---
+
+class: inverse, center, middle
+
+## Species Richness
+is an extensive variable
+
+=
+
+proportional to spatial and temporal scales
 ---
 
 # Species richness and spatial scale : the SAR
@@ -186,9 +145,9 @@ knitr::include_graphics("images/star.png")
 
 class: inverse, center, middle
 
-What about space, time and...
+What about the relationship between space, time and...
 
-## Species richness trends ?
+## Species richness <span style="color: red;">trends</span> ?
 
 ---
 
@@ -241,11 +200,11 @@ What are the links between species-richness trends and spatio-temporal scales?
 
 
 <br><br><br>
-<b>Taxon:</b> Birds (many long time series, well identified, able to move after perturbations...)
+<b>Taxon:</b> Birds
 
-<b>Location:</b> At first Czech Republic, then western Europe, north America...
+<b>Location:</b> So far Czech Republic
 
-<b>Methods:</b> Tree based Machine learning approaches (Random Forests or Boosted Regression Trees)
+<b>Methods:</b> Machine learning (CART, GLM...)
 
 ---
 
@@ -263,7 +222,7 @@ knitr::include_graphics("images/star.png")
 
 ---
 
-# Avian biodiversity datasets
+# Datasets
 
 <br>
 We need heterogeneous datasets with:
@@ -303,6 +262,9 @@ shp_country <- ne_countries(scale = "medium", returnclass = "sf")
 ```
 
 .pull-left[
+
+.center[**Temporal scales**]
+
 4 time periods, 3 different time spans:
 
 * M1 = 1973-1977 (5 years)
@@ -315,7 +277,10 @@ shp_country <- ne_countries(scale = "medium", returnclass = "sf")
 ]
 
 .pull-right[
-Spatial scales ranging from less than 100 Km $^2$ to 80 000 Km $^2$ (the entire Czech Republic)
+
+.center[**Spatial scales**]
+
+Ranging from less than 100 Km $^2$ to 80 000 Km $^2$ (the entire Czech Republic)
 ]
 
 ---
@@ -355,7 +320,7 @@ ggdraw()+
 
 ---
 
-# The JPSP dataset
+# The BBS dataset
 
 * Local time series
 
@@ -367,14 +332,14 @@ ggdraw()+
 
 * At least 2 censuses per transect and per year
 
-* 4 different spatial scales
+* 4 different **spatial scales**
 
-* Temporal scales ranging from 0.5 year to 5 years
+* **Temporal scales** ranging from 0.5 year to 5 years
 
 
 ---
 
-# The JPSP dataset
+# The BBS dataset
 
 ```{r}
 ## Load the database
@@ -535,7 +500,7 @@ m
 
 class: inverse, center, middle
 
-# Pilot results
+# Data analysis
 
 ---
 
@@ -621,48 +586,16 @@ randomForest(sr ~ Lat + Long + AREA + Date + polypoint_ratio + time_span)
 
 # Partial plots
 
-.pull-left[
+.center[
 
-.center[**The SAR**]
+*Species-time relationship (STR) through time*
 
-```{r, out.width="100%"}
-knitr::include_graphics("images/sar_rf.jpg")
-```
-
-]
-
-.pull-right[
-
-.center[**The STR**]
-
-```{r, out.width="100%"}
-knitr::include_graphics("images/str_rf.jpg")
-```
-
-]
-
----
-
-# Partial plots
-
-.pull-left[
-
-.center[**The STAR**]
-
-```{r, out.width="100%"}
-knitr::include_graphics("images/star_rf.png")
-```
-
-]
-
-.pull-right[
-
-.center[<br>]
-
-```{r, out.width="100%"}
+```{r, out.width="50%"}
 knitr::include_graphics("images/str_overtime.png")
 ```
+
 ]
+
 
 ---
 
@@ -731,4 +664,46 @@ class: inverse, center, middle
 
 .footnote[
 Email: leroy@fzp.czu.cz
+
+Twitter: @FrsLry
+]
+
+---
+
+class: inverse, center, middle
+
+## Supplementary slides
+
+---
+
+# Observed vs. predicted
+
+.center[
+```{r, out.width="80%"}
+knitr::include_graphics("images/obs_vs_pred.png")
+```
+]
+
+---
+
+# SAR and STR
+
+.pull-left[
+
+.center[**The SAR**]
+
+```{r, out.width="100%"}
+knitr::include_graphics("images/sar_rf.jpg")
+```
+
+]
+
+.pull-right[
+
+.center[**The STR**]
+
+```{r, out.width="100%"}
+knitr::include_graphics("images/str_rf.jpg")
+```
+
 ]

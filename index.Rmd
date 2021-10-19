@@ -2,7 +2,7 @@
 title: "Mapping biodiversity changes across<br>spatial and temporal scales"
 subtitle: "<br>PhD Presentation"
 author: "<br><br>Student: François Leroy<br>Supervisor: Petr Keil"
-institute: "Czech Univeristy of Life Sciences<br>Prague"
+institute: "Czech University of Life Sciences<br>Prague"
 # date: "2016/12/12 (updated: `r Sys.Date()`)"
 output:
   xaringan::moon_reader:
@@ -649,7 +649,7 @@ knitr::include_graphics("images/boxplot_with_predictions.png")
 * Explore the link with temporal scales
 
 <br>
-* Enlarge the model to western europe
+* Enlarge the model to Europe
 
 <br>
 * Study other biodiversity metrics and other taxa (lepidopterans, amphibians...)

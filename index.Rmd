@@ -560,7 +560,7 @@ knitr::include_graphics("images/boxplot.png")
 
 class: inverse, center, middle 
 
-# Next step
+# Modeling
 
 ---
 

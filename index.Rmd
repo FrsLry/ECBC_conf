@@ -153,6 +153,7 @@ What about the relationship between space, time and...
 
 # Biodiversity changes and spatial scales
 
+<br><br>
 .pull-left[
 * According to the taxa:
 
@@ -161,23 +162,15 @@ What about the relationship between space, time and...
 * For North American birds, larger spatial scales seem to increase positively the species richness (Oikos, Chase *et al* 2019)
 <br>
 
---------
-
-* Temporal <span style="color: grey;">dissimilarity</span> and <span style="color: red;">turnover</span>, <span style="color: orange;">extinction</span> and <span style="color: blue;">colonization</span> seem to decrease with increasing spatial scales (Glob. Ecol. Biogeogr., Jarzyna *et al.* 2015)
 ]
-
 
 .pull-right[
 
 .center[
-```{r, out.width="75%"}
+```{r, out.width="100%"}
 knitr::include_graphics("images/chase_2019.PNG")
 ```
 ]
-
-```{r, out.height='3%'}
-knitr::include_graphics("images/jarzyna_2015.PNG")
-```
 
 ]
 
@@ -186,7 +179,7 @@ knitr::include_graphics("images/jarzyna_2015.PNG")
 # Biodiversity changes and temporal scales...
 
 <br><br><br>
-.center[...so far, nothing in sight in the scientific litterature]
+.center[...nothing in sight in the scientific literature]
 
 ---
 
@@ -194,7 +187,7 @@ class: inverse, center, middle
 
 # Problematic:
 
-What are the links between species-richness trends and spatio-temporal scales?
+### What are the links between <span style="color: red;">species-richness trends</span> and <span style="color: red;">spatio-temporal scales</span>?
 
 --
 
@@ -234,11 +227,11 @@ We need heterogeneous datasets with:
 * Several temporal scales
 
 <br><br>
-So far, I worked with 2 datasets: 
+2 datasets: 
 
-1. The atlas data from the Czech Society for Ornithology (Česká společnost ornitologická). Courtesy of Vladimír Bejček, Karel Šťastný and Ivan Mikuláš.
+1. The **atlas** data from the Czech Society for Ornithology (Česká společnost ornitologická). Courtesy of Vladimír Bejček, Karel Šťastný and Ivan Mikuláš.
 
-2. Local time series from the Breeding Bird Survey (Jednotný program sčítání ptáků). Courtesy of Jiří Reif. 
+2. Local time series from the **Breeding Bird Survey** (Jednotný program sčítání ptáků). Courtesy of Jiří Reif. 
 
 ---
 
@@ -267,20 +260,20 @@ shp_country <- ne_countries(scale = "medium", returnclass = "sf")
 
 4 time periods, 3 different time spans:
 
-* M1 = 1973-1977 (5 years)
+* M1 = 1973-1977 (**5 years**)
 
-* M2 = 1985-1989 (5 years)
+* M2 = 1985-1989 (**5 years**)
 
-* M3 = 2001-2003 (3 years)
+* M3 = 2001-2003 (**3 years**)
 
-* M4 = 2014-2017 (4 years)
+* M4 = 2014-2017 (**4 years**)
 ]
 
 .pull-right[
 
 .center[**Spatial scales**]
 
-Ranging from less than 100 Km $^2$ to 80 000 Km $^2$ (the entire Czech Republic)
+Ranging from less than **100 Km** $^2$ to **80 000 Km** $^2$ (the entire Czech Republic)
 ]
 
 ---
@@ -334,7 +327,7 @@ ggdraw()+
 
 * 4 different **spatial scales**
 
-* **Temporal scales** ranging from 0.5 year to 5 years
+* **Temporal scales** ranging from 0.5 year to decades
 
 
 ---
@@ -506,7 +499,7 @@ class: inverse, center, middle
 
 # Species richness trend across spatial scales
 
-* For each spatial scale, we computed the species richness trend (slope of linear regression)
+* For each spatial scale, we computed the **species richness trend** (slope of linear regression)
 
 * 3 points in time (1987, 2002, 2015)
 
@@ -565,8 +558,6 @@ class: inverse, center, middle
 ---
 
 # Random Forest
-
-Machine learning approach allows me to:
 
 1. Understand the drivers of species richness changes
 

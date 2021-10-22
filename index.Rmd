@@ -1,5 +1,5 @@
 ---
-title: "Mapping biodiversity changes across<br>spatial and temporal scales"
+title: "Mapping biodiversity changes across<br>spatio-temporal scales"
 subtitle: "<br>PhD Presentation"
 author: "<br><br>Student: François Leroy<br>Supervisor: Petr Keil"
 institute: "Czech University of Life Sciences<br>Prague"
